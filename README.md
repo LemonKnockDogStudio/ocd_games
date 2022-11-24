@@ -4,7 +4,7 @@
 
 Current Available Games:
 
-- [Another 2048](/another_2048)
+- [Another 2048](/odc_games/another_2048)
 
 TODO：
 
