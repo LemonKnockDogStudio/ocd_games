@@ -54,10 +54,13 @@ async function handleInput(e) {
   grid.randomEmptyCell().tile = newTile;
 
   if (!(canMoveUp() || canMoveDown() || canMoveLeft() || canMoveRight())) {
-    newTile.waitForTransition
+    newTile.waitForTransition(true).then(() => {
+      alert("You lose");
+    });
+  } else {
+    setupInput();
   }
 
-  setupInput();
 }
 
 async function moveUp() {
@@ -78,16 +81,16 @@ function moveRight() {
 
 function slideTiles(cells) {
   return Promise.all(
-    cells.flatMap(column => {
+    cells.flatMap(group => {
       const promises = [];
       // top cannot move, so start from 1
-      for (let i = 1; i < column.length; i++) {
-        const cell = column[i];
+      for (let i = 1; i < group.length; i++) {
+        const cell = group[i];
         if (!cell.tile)
           continue;
         let lastValidCell;
         for (let j = i - 1; j >= 0; j--) {
-          const distCell = column[j];
+          const distCell = group[j];
           if (!distCell.canAccept(cell.tile))
             break;
           lastValidCell = distCell;
