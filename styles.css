@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  background-color: #333;
+
+}
+
+.container {
+  width: 50vw;
+  background-color: #999;
+  padding: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.item-avaliable,
+.item-not-avaliable {
+  width: 50%;
+  display: inline-block;
+  padding: 0.3rem;
+  color: white;
+  background-color: hsl(300, 100%, 25%);
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+}
+
+.item-avaliable:hover,
+.item-not-avaliable:hover {
+  background-color: hsl(300, 100%, 30%);
+}
+
