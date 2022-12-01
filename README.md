@@ -5,10 +5,10 @@
 Current Available Games:
 
 - [Another 2048](/ocd_games/another_2048)
+- [Snake](/ocd_games/snake)
 
 TODO：
 
-- Snake Game
 - Sudoku
 - ...
 - build a single page
