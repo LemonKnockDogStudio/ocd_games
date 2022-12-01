@@ -17,6 +17,7 @@ function setupInput() {
 async function handleInput(e) {
   switch (e.key) {
     case "ArrowUp":
+    case "w":
       if (!canMoveUp()) {
         setupInput();
         return;
@@ -24,6 +25,7 @@ async function handleInput(e) {
       await moveUp();
       break;
     case "ArrowDown":
+    case "s":
       if (!canMoveDown()) {
         setupInput();
         return;
@@ -31,6 +33,7 @@ async function handleInput(e) {
       await moveDown();
       break;
     case "ArrowLeft":
+    case "a":
       if (!canMoveLeft()) {
         setupInput();
         return;
@@ -38,6 +41,7 @@ async function handleInput(e) {
       await moveLeft();
       break;
     case "ArrowRight":
+    case "d":
       if (!canMoveRight()) {
         setupInput();
         return;
@@ -60,7 +64,6 @@ async function handleInput(e) {
   } else {
     setupInput();
   }
-
 }
 
 async function moveUp() {

@@ -11,6 +11,10 @@ body {
   height: 100vh;
   margin: 0;
   font-size: 7.5vmin;
+
+  --cell-size: 20vmin;
+  --cell-gap: 2vmin;
+  --grid-size: 4;
 }
 
 #game-board {
@@ -55,3 +59,10 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  body {
+    --cell-size: 15vmin;
+    --cell-gap: 1.5vmin;
+    font-size: 6vmin;
+  }
+}
