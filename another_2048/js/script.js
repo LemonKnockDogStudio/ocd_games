@@ -1,5 +1,5 @@
-import Grid from "./Grid.js";
-import Tile from "./Tile.js";
+import Grid from "./grid.js";
+import Tile from "./tile.js";
 
 const gameBoard = document.getElementById("game-board");
 
